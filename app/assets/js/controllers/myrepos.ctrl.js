@@ -3,14 +3,24 @@ gitfox.ctrl = gitfox.ctrl || {};
 
 !function(gitfox) {
   var token = '?access_token=6d804e7fcd06deb08cba0b464b1c4b5f75563fcd';
+  token += '&callback=cb';
+
   var git = gitfox.model.gitAPI;
+
+
 
   gitfox.ctrl.myRepos = function myRepos($scope, $http) {
 
     $http.jsonp(git.URL + 'users/' + gitfox.ctrl.frontpage.getUser() + '/repos' + token)
       .success(function(data){
+        console.log('wtf', data);
         $scope.repos = data;
+        console.log('$scope.repos:', $scope.repos);
       });
+    window.cb = function(data) {
+      console.log(data);
+      $scope.repos = data;
+    };
   };
   gitfox.ctrl.myRepos.$inject = ['$scope', '$http'];
 

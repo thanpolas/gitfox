@@ -1,7 +1,6 @@
-{{repos}}
 <a href="javascript:history.back()" class="out-nav"><i class="icon-reply"></i>Go Back</a>
 <ul class="repos gf-list">
-  <li ng-repeat="repo in repos" class="repo-item gf-item">
+  <li ng-repeat="repo in repos.data" class="repo-item gf-item">
     <a href="/#/myrepos/{{repo.name}}" class="repo-item">
        <strong>{{repo.name}}</strong>
        <span>{{repo.description}}</span>
