@@ -47,12 +47,10 @@ gitfox.ctrl = gitfox.ctrl || {};
         repoContents.content = Base64.decode(repoContents.content);
         $scope.content = repoContents;
         $scope.shClass = gitfox.getSHext(repoContents.name);
-        $scope.$on('$viewContentLoaded', function() {
             // ugly, need to figure this out
             setTimeout(function(){
               SyntaxHighlighter.highlight();
             }, 200);
-        });
       } else {
         $scope.error = true;
       }
