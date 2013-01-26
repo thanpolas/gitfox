@@ -11,14 +11,8 @@ gitfox.ctrl = gitfox.ctrl || {};
 
   gitfox.ctrl.myRepos = function myRepos($scope, $http) {
 
-    $http.jsonp(git.URL + 'users/' + gitfox.ctrl.frontpage.getUser() + '/repos' + token)
-      .success(function(data){
-        console.log('wtf', data);
-        $scope.repos = data;
-        console.log('$scope.repos:', $scope.repos);
-      });
+    $http.jsonp(git.URL + 'users/' + gitfox.ctrl.frontpage.getUser() + '/repos' + token);
     window.cb = function(data) {
-      console.log(data);
       $scope.repos = data;
     };
   };
@@ -28,20 +22,18 @@ gitfox.ctrl = gitfox.ctrl || {};
     $scope.error = false;
 
     var selectedRepo = $routeParams.repo;
-    var selectedPath = $routeParams.path;
+    var selectedPath = $routeParams.path || '';
 
-    $http.jsonp();
+    var url = git.URL + 'repos/' +
+      gitfox.ctrl.frontpage.getUser() +
+      '/' + selectedRepo + '/contents/' + selectedPath + token;
 
-
-    git.setRepo(selectedRepo);
-    git.fetchContents(function(repoContents){
-
-      if (selectedPath) {
-        //repoContents = Array.prototype.slice.call(fixtures.repoContentsSubfolder);
-        repoContents = fixtures.repoContentsFile;
+    $http.jsonp(url);
+    window.cb = function(repoContents) {
+      repoContents = repoContents.data;
+      if (selectedPath !== '') {
         $scope.isRoot = false;
       } else {
-        repoContents = fixtures.repoContents;
         $scope.isRoot = true;
       }
 
@@ -68,8 +60,8 @@ gitfox.ctrl = gitfox.ctrl || {};
       $scope.repo = {
         name: selectedRepo
       };
+    };
 
-    }, selectedPath);
 
   };
 
