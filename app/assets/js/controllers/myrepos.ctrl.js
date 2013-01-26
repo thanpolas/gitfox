@@ -39,6 +39,10 @@ gitfox.ctrl = gitfox.ctrl || {};
       $scope.folder = false;
       repoContents.content = Base64.decode(repoContents.content);
       $scope.content = repoContents;
+      $scope.shClass = gitfox.getSHext(repoContents.name);
+      $scope.$on('$viewContentLoaded', function() {
+          SyntaxHighlighter.highlight();
+      });
     } else {
       $scope.error = true;
     }
@@ -46,6 +50,44 @@ gitfox.ctrl = gitfox.ctrl || {};
     $scope.repo = {
       name: selectedRepo
     };
+  };
+
+
+  /**
+   * Return the proper class for syntax highlighting
+   * for the given filename
+   * @param  {string} filename [description]
+   * @return {string}          [description]
+   */
+  gitfox.getSHext = function(filename) {
+    var parts = filename.split('.');
+    var defaultBrush = 'brush: plain';
+
+    if (1 == parts.length){
+      // no extension...
+      return defaultBrush;
+    }
+
+    var ext = parts[parts.length - 1];
+
+    switch(ext) {
+      case 'js':
+        return 'brush: js';
+      break;
+      case 'rb':
+        return 'brush: ruby';
+      break;
+      case 'py':
+        return 'brush: python';
+      break;
+      case 'php':
+        return 'brush: php';
+      break;
+      default:
+        return defaultBrush;
+      break;
+    }
+
   };
 
 }(gitfox);
