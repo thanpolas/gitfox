@@ -4,8 +4,9 @@ gitfox.ctrl = gitfox.ctrl || {};
 
 !function(gitfox) {
   gitfox.ctrl.myRepos = function myRepos($scope, $routeParams) {
-    log($scope);
-    log($routeParams);
+    console.log($scope);
+    console.log($routeParams);
+
   };
 
 }(gitfox);
