@@ -1,6 +1,25 @@
-<table class="repo-contents">
-  <tr ng-repeat="content in contents">
-    <td>{{content.type}}</td>
-    <td><a href="/#/myrepos/{{repo.name}}/{{content.name}}">{{content.name}}</a></td>
-  </tr>
-</table>
+<div class="repo-file-content" ng-hide="folder">
+  <header>
+    <h2>{{content.name}}</h2>
+    <span class="size-label">size:</span>
+    <span class="size-value">{{content.size}}</span>
+    <a href="{{content.html_url}}">View on Github</a>
+  </header>
+  <code>
+    <pre class="{{shClass}}">
+      {{content.content}}
+    </pre>
+  </code>
+</div>
+
+<ul class="repo-contents gf-list" ng-show="folder">
+  <li ng-hide="isRoot">
+    <a href="javascript:history.back()">..</a>
+  </li>
+  <li ng-repeat="content in contents" class="repo-item gf-item">
+    <a href="/#/myrepos/{{repo.name}}/{{content.name}}" class="repo-item">
+       <strong><i class="icon-{{content.type}}-custom"></i></strong>
+       <span>{{content.name}}</span>
+    </a>
+  </li>
+</ul>

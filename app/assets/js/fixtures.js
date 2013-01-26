@@ -211,3 +211,20 @@ fixtures.repoContentsSubfolder = [
   }
 ];
 
+fixtures.repoContentsFile = {
+  "url": "https://api.github.com/repos/thanpolas/gitfox/contents/grunt.js",
+  "type": "file",
+  "sha": "9878729f3819152eb7e2888baaf811655f4ba088",
+  "path": "grunt.js",
+  "encoding": "base64",
+  "content": "LypnbG9iYWwgbW9kdWxlOmZhbHNlKi8KbW9kdWxlLmV4cG9ydHMgPSBmdW5j\ndGlvbihncnVudCkgewoKICAvLyBQcm9qZWN0IGNvbmZpZ3VyYXRpb24uCiAg\nZ3J1bnQuaW5pdENvbmZpZyh7CiAgICBwa2c6ICc8anNvbjptaXRocmlvbi5q\ncXVlcnkuanNvbj4nLAogICAgbWV0YTogewogICAgICBiYW5uZXI6ICcvKiEg\nPCU9IHBrZy50aXRsZSB8fCBwa2cubmFtZSAlPiAtIHY8JT0gcGtnLnZlcnNp\nb24gJT4gLSAnICsKICAgICAgICAnPCU9IGdydW50LnRlbXBsYXRlLnRvZGF5\nKCJ5eXl5LW1tLWRkIikgJT5cbicgKwogICAgICAgICc8JT0gcGtnLmhvbWVw\nYWdlID8gIiogIiArIHBrZy5ob21lcGFnZSArICJcbiIgOiAiIiAlPicgKwog\nICAgICAgICcqIENvcHlyaWdodCAoYykgPCU9IGdydW50LnRlbXBsYXRlLnRv\nZGF5KCJ5eXl5IikgJT4gPCU9IHBrZy5hdXRob3IubmFtZSAlPjsnICsKICAg\nICAgICAnIExpY2Vuc2VkIDwlPSBfLnBsdWNrKHBrZy5saWNlbnNlcywgInR5\ncGUiKS5qb2luKCIsICIpICU+ICovJwogICAgfSwKICAgIGNvbmNhdDogewog\nICAgICBkaXN0OiB7CiAgICAgICAgc3JjOiBbJzxiYW5uZXI6bWV0YS5iYW5u\nZXI+JywgJzxmaWxlX3N0cmlwX2Jhbm5lcjpzcmMvPCU9IHBrZy5uYW1lICU+\nLmpzPiddLAogICAgICAgIGRlc3Q6ICdkaXN0LzwlPSBwa2cubmFtZSAlPi5q\ncycKICAgICAgfQogICAgfSwKICAgIG1pbjogewogICAgICBkaXN0OiB7CiAg\nICAgICAgc3JjOiBbJzxiYW5uZXI6bWV0YS5iYW5uZXI+JywgJzxjb25maWc6\nY29uY2F0LmRpc3QuZGVzdD4nXSwKICAgICAgICBkZXN0OiAnZGlzdC88JT0g\ncGtnLm5hbWUgJT4ubWluLmpzJwogICAgICB9CiAgICB9LAogICAgcXVuaXQ6\nIHsKICAgICAgZmlsZXM6IFsndGVzdC8qKi8qLmh0bWwnXQogICAgfSwKICAg\nIGxpbnQ6IHsKICAgICAgZmlsZXM6IFsnZ3J1bnQuanMnLCAnc3JjLyoqLyou\nanMnLCAndGVzdC8qKi8qLmpzJ10KICAgIH0sCiAgICB3YXRjaDogewogICAg\nICBmaWxlczogJzxjb25maWc6bGludC5maWxlcz4nLAogICAgICB0YXNrczog\nJ2xpbnQgcXVuaXQnCiAgICB9LAogICAganNoaW50OiB7CiAgICAgIG9wdGlv\nbnM6IHsKICAgICAgICBjdXJseTogdHJ1ZSwKICAgICAgICBlcWVxZXE6IHRy\ndWUsCiAgICAgICAgaW1tZWQ6IHRydWUsCiAgICAgICAgbGF0ZWRlZjogdHJ1\nZSwKICAgICAgICBuZXdjYXA6IHRydWUsCiAgICAgICAgbm9hcmc6IHRydWUs\nCiAgICAgICAgc3ViOiB0cnVlLAogICAgICAgIHVuZGVmOiB0cnVlLAogICAg\nICAgIGJvc3M6IHRydWUsCiAgICAgICAgZXFudWxsOiB0cnVlLAogICAgICAg\nIGJyb3dzZXI6IHRydWUKICAgICAgfSwKICAgICAgZ2xvYmFsczogewogICAg\nICAgIGpRdWVyeTogdHJ1ZQogICAgICB9CiAgICB9LAogICAgdWdsaWZ5OiB7\nfQogIH0pOwoKICAvLyBEZWZhdWx0IHRhc2suCiAgZ3J1bnQucmVnaXN0ZXJU\nYXNrKCdkZWZhdWx0JywgJ2xpbnQgcXVuaXQgY29uY2F0IG1pbicpOwoKfTsK\n",
+  "size": 1485,
+  "_links": {
+    "self": "https://api.github.com/repos/thanpolas/gitfox/contents/grunt.js",
+    "html": "https://github.com/thanpolas/gitfox/blob/master/grunt.js",
+    "git": "https://api.github.com/repos/thanpolas/gitfox/git/blobs/9878729f3819152eb7e2888baaf811655f4ba088"
+  },
+  "git_url": "https://api.github.com/repos/thanpolas/gitfox/git/blobs/9878729f3819152eb7e2888baaf811655f4ba088",
+  "name": "grunt.js",
+  "html_url": "https://github.com/thanpolas/gitfox/blob/master/grunt.js"
+};

@@ -7,19 +7,33 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all">
+    <link href="assets/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
     <link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <link href="assets/css/vendor/shCore.css" rel="stylesheet" type="text/css" media="all">
+    <link href="assets/css/vendor/shThemeDefault.css" rel="stylesheet" type="text/css" media="all">
+
   </head>
-
   <body>
-    <h1 class="logo">GitFox</h1>
+    <a href="/#/"><h1 class="logo">GitFox</h1></a>
     <div id="logger"></div>
-
-    <div ng-view></div>
+    <section class="main-content">
+      <div ng-view></div>
+    </section>
     <script type="text/javascript" src="assets/js/vendor/lodash.1.4.3.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.1.8.0.js"><\/script>')</script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
     <script>window.angular || document.write('<script src="/assets/js/vendor/angular.1.0.4.js"><\/script>')</script>
+    <script type="text/javascript" src="assets/js/vendor/shCore.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushJScript.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushRuby.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushPython.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushPhp.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushCss.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/shBrushes/shBrushPlain.js"></script>
+
+
 
     <script type="text/javascript" src="assets/js/vendor/github/lib/base64.js"></script>
     <script type="text/javascript" src="assets/js/vendor/github/github.js"></script>

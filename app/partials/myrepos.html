@@ -1,8 +1,8 @@
-<ul class="repos">
-  <li ng-repeat="repo in repos" class="repo-item">
+<ul class="repos gf-list">
+  <li ng-repeat="repo in repos" class="repo-item gf-item">
     <a href="/#/myrepos/{{repo.name}}" class="repo-item">
-       <h4>{{repo.name}}</h4>
-       <p>{{repo.description}}</p>
+       <strong>{{repo.name}}</strong>
+       <span>{{repo.description}}</span>
     </a>
   </li>
 </ul>
