@@ -7,4 +7,12 @@ gitfox.ctrl = gitfox.ctrl || {};
 
   };
 
+  /**
+   *
+   * @return {[type]} [description]
+   */
+  gitfox.ctrl.frontpage.getUser = function() {
+    return 'thanpolas';
+  };
+
 }(gitfox);

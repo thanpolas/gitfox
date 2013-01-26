@@ -2,57 +2,65 @@ var gitfox = gitfox || {};
 gitfox.ctrl = gitfox.ctrl || {};
 
 !function(gitfox) {
+  var token = '?access_token=6d804e7fcd06deb08cba0b464b1c4b5f75563fcd';
+  var git = gitfox.model.gitAPI;
 
-  gitfox.ctrl.myRepos = function myRepos($scope, $routeParams) {
-    console.log($scope);
+  gitfox.ctrl.myRepos = function myRepos($scope, $http) {
 
-    var repos = Array.prototype.slice.call(fixtures.myRepos);
-
-
-    $scope.repos = repos;
+    $http.jsonp(git.URL + 'users/' + gitfox.ctrl.frontpage.getUser() + '/repos' + token)
+      .success(function(data){
+        $scope.repos = data;
+      });
   };
+  gitfox.ctrl.myRepos.$inject = ['$scope', '$http'];
 
-  gitfox.ctrl.myRepoContents = function myRepoContents($scope, $routeParams) {
+  gitfox.ctrl.myRepoContents = function myRepoContents($scope, $routeParams, $http) {
     $scope.error = false;
-
-    console.log($routeParams);
 
     var selectedRepo = $routeParams.repo;
     var selectedPath = $routeParams.path;
 
-    var repoContents;
-    if (selectedPath) {
-      //repoContents = Array.prototype.slice.call(fixtures.repoContentsSubfolder);
-      repoContents = fixtures.repoContentsFile;
-      $scope.isRoot = false;
-    } else {
-      repoContents = fixtures.repoContents;
-      $scope.isRoot = true;
-    }
+    $http.jsonp();
 
-    // check type of contents
-    if (_.isArray(repoContents)) {
-      $scope.folder = true;
-      $scope.contents = repoContents;
 
-    } else if (_.isObject(repoContents)) {
-      $scope.folder = false;
-      repoContents.content = Base64.decode(repoContents.content);
-      $scope.content = repoContents;
-      $scope.shClass = gitfox.getSHext(repoContents.name);
-      $scope.$on('$viewContentLoaded', function() {
-          // ugly, need to figure this out
-          setTimeout(function(){
-            SyntaxHighlighter.highlight();
-          }, 200);
-      });
-    } else {
-      $scope.error = true;
-    }
+    git.setRepo(selectedRepo);
+    git.fetchContents(function(repoContents){
 
-    $scope.repo = {
-      name: selectedRepo
-    };
+      if (selectedPath) {
+        //repoContents = Array.prototype.slice.call(fixtures.repoContentsSubfolder);
+        repoContents = fixtures.repoContentsFile;
+        $scope.isRoot = false;
+      } else {
+        repoContents = fixtures.repoContents;
+        $scope.isRoot = true;
+      }
+
+      // check type of contents
+      if (_.isArray(repoContents)) {
+        $scope.folder = true;
+        $scope.contents = repoContents;
+
+      } else if (_.isObject(repoContents)) {
+        $scope.folder = false;
+        repoContents.content = Base64.decode(repoContents.content);
+        $scope.content = repoContents;
+        $scope.shClass = gitfox.getSHext(repoContents.name);
+        $scope.$on('$viewContentLoaded', function() {
+            // ugly, need to figure this out
+            setTimeout(function(){
+              SyntaxHighlighter.highlight();
+            }, 200);
+        });
+      } else {
+        $scope.error = true;
+      }
+
+      $scope.repo = {
+        name: selectedRepo
+      };
+
+    }, selectedPath);
+
   };
 
 
