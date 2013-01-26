@@ -1,6 +1,6 @@
 var gitfox = gitfox || {};
 gitfox.ctrl = gitfox.ctrl || {};
-
+var gitUsername = 'thanpolas';
 
 !function(gitfox) {
   gitfox.ctrl.frontpage = function frontpage($scope, $routeParams) {
@@ -12,7 +12,16 @@ gitfox.ctrl = gitfox.ctrl || {};
    * @return {[type]} [description]
    */
   gitfox.ctrl.frontpage.getUser = function() {
-    return 'thanpolas';
+    return gitUsername;
   };
 
 }(gitfox);
+
+
+$(document).ready(function() {
+  $("body").on('submit', ".welcome-screen form", function() {
+    gitUsername = $('#github-username').val();
+    $(".welcome-screen").slideUp();
+    $('#main-food').slideDown();
+  });
+});

@@ -9,6 +9,7 @@ html {
 
 h2 {
     margin: 0;
+    margin-bottom: 5px;
 }
 
 a {
@@ -23,6 +24,7 @@ ul {
 }
 pre,code {
     font-size: 12px;
+    text-align: left;
 }
 .size-value {
     font-size: 13px;
@@ -57,7 +59,7 @@ pre,code {
     border-radius: 4px;
     border: 2px solid #5B6173;
     background-color: #313644;
-    padding:3px;
+    padding: 12px 3px;
     display: block;
     color: #fff;
 }
@@ -85,7 +87,7 @@ pre,code {
 .gf-list > .gf-item > a {
     display: block;
     outline:0 ;
-    padding: 4px;
+    padding: 10px 4px;
 }
 .gf-list > .gf-item > a:hover {
     background-color: #F8FAFE;
@@ -127,10 +129,21 @@ pre,code {
     text-align:left;
     color:#fff;
     display: block;
-    padding: 5px 10px;
+    padding: 7px 10px;
 }
 
 .out-nav > i {
     margin-right: 8px;
 }
 
+
+#install_app {
+    color: #fff;
+}
+.pre-install {
+    color: #aaa;
+}
+
+/*.ng-scope .pre-install  {
+    display: none;
+}*/
