@@ -13,19 +13,36 @@ gitfox.ctrl = gitfox.ctrl || {};
   };
 
   gitfox.ctrl.myRepoContents = function myRepoContents($scope, $routeParams) {
+    $scope.error = false;
 
     console.log($routeParams);
+
     var selectedRepo = $routeParams.repo;
     var selectedPath = $routeParams.path;
 
     var repoContents;
     if (selectedPath) {
-      repoContents = Array.prototype.slice.call(fixtures.repoContentsSubfolder);
+      //repoContents = Array.prototype.slice.call(fixtures.repoContentsSubfolder);
+      repoContents = fixtures.repoContentsFile;
+      $scope.isRoot = false;
     } else {
-      repoContents = Array.prototype.slice.call(fixtures.repoContents);
+      repoContents = fixtures.repoContents;
+      $scope.isRoot = true;
     }
 
-    $scope.contents = repoContents;
+    // check type of contents
+    if (_.isArray(repoContents)) {
+      $scope.folder = true;
+      $scope.contents = repoContents;
+
+    } else if (_.isObject(repoContents)) {
+      $scope.folder = false;
+      repoContents.content = Base64.decode(repoContents.content);
+      $scope.content = repoContents;
+    } else {
+      $scope.error = true;
+    }
+
     $scope.repo = {
       name: selectedRepo
     };
