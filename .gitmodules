@@ -1,0 +1,3 @@
+[submodule "app/assets/js/vendor/gh3"]
+	path = app/assets/js/vendor/gh3
+	url = https://github.com/k33g/gh3.git
