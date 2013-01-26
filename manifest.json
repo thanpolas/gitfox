@@ -1,0 +1,9 @@
+{
+  "name": "GitFox",
+  "description": "A github client for Firefox OS",
+  "launch_path": "/app",
+  "icons": {
+    "128": "/app/assets/img/icon-128.png"
+  },
+  "default_locale": "en"
+}
