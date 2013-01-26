@@ -1,1 +1,8 @@
-myrepos
+<ul class="repos">
+  <li ng-repeat="repo in repos" class="repo-item">
+    <a href="/#/myrepos/{{repo.name}}" class="repo-item">
+       <h4>{{repo.name}}</h4>
+       <p>{{repo.description}}</p>
+    </a>
+  </li>
+</ul>
