@@ -12,13 +12,14 @@
   </code>
 </div>
 
-<table class="repo-contents" ng-show="folder">
-  <tr ng-hide="isRoot">
-    <td>&nbsp;</td>
-    <td><a href="javascript:history.back()">..</a></td>
-  </tr>
-  <tr ng-repeat="content in contents">
-    <td>{{content.type}}</td>
-    <td><a href="/#/myrepos/{{repo.name}}/{{content.name}}">{{content.name}}</a></td>
-  </tr>
-</table>
+<ul class="repo-contents gf-list" ng-show="folder">
+  <li ng-hide="isRoot">
+    <a href="javascript:history.back()">..</a>
+  </li>
+  <li ng-repeat="content in contents" class="repo-item gf-item">
+    <a href="/#/myrepos/{{repo.name}}/{{content.name}}" class="repo-item">
+       <strong><i class="icon-{{content.type}}-custom"></i></strong>
+       <span>{{content.name}}</span>
+    </a>
+  </li>
+</ul>
