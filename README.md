@@ -18,7 +18,6 @@ In your web page:
 ## Authors
 * [Thanpolas](https://thanpol.as) Thanasis Polychronakis
 * [Sevastos](https://github.com/sevastos) Sevastos Mastrogiorgis
-* [Leonidas](https://github.com/leoapost) Leonidas Apostolids
-* [Ckor](https://github.com/andrewckor) Andrew Ckor
+* [Leonidas](https://github.com/leoapost) Leonidas Apostolidis
 * [dmtrs](https://github.com/dmtrs) Dimitris Meggidis
 
