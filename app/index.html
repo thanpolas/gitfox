@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="gitfox">
   <head>
     <meta charset="utf-8">
     <title>GitFox</title>
@@ -14,9 +14,16 @@
     <h1 class="logo">GitFox</h1>
     <div id="logger"></div>
 
+    <div ng-view></div>
 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script>window.angular || document.write('<script src="/assets/js/vendor/angular.1.0.4.js"><\/script>')</script>
     <script type="text/javascript" src="assets/js/vendor/gh3/gh3.js"></script>
-    <script type="text/javascript" src="assets/js/gitfox.js"></script>
+    <script type="text/javascript" src="assets/js/debug.js"></script>
+
+    <script type="text/javascript" src="assets/js/controllers/frontpage.ctrl.js"></script>
+    <script type="text/javascript" src="assets/js/controllers/mygists.ctrl.js"></script>
+
     <script type="text/javascript" src="assets/js/gitfox.js"></script>
 
   </body>
