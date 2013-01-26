@@ -1,1 +1,71 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:400,700,400italic,700italic|Grand+Hotel);/* normalize.css v2.0.1 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}body,html{padding:0;margin:0;width:100%;height:100%}html{background-color:#3E4352;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;-webkit-box-shadow:inset 0 0 0 8px rgba(0,0,0,0.05);-moz-box-shadow:inset 0 0 0 8px rgba(0,0,0,0.05);box-shadow:inset 0 0 0 8px rgba(0,0,0,0.05)}body{text-align:center;font-family:'Exo', sans-serif}.logo{position:relative;cursor:pointer;color:#fff;font-size:50px;font-family:'Grand Hotel', cursive;text-shadow:0 0 10px rgba(0,0,0,0.3),0 1px 3px rgba(0,0,0,0.5);-webkit-user-select:none;-moz-user-select:none;font-weight: normal;user-select:none}.logo:active{top:1px;text-shadow:0 1px 1px rgba(0,0,0,0.1)}label{width:80%;max-width:200px;margin-bottom:20px;margin-top:50px;display:inline-block;font-weight:bold;font-size:19px;color:#1d1f26;text-shadow:0 1px 0 rgba(255,255,255,0.1)}#debug-note{padding:8px 20px;width:80%;max-width:200px;text-align:center;display:inline-block;-webkit-border-radius:6px;-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 0 0 6px rgba(0,0,0,0.05),0 1px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 0 0 6px rgba(0,0,0,0.05),0 1px 3px rgba(0,0,0,0.2);box-shadow:0 0 0 6px rgba(0,0,0,0.05),0 1px 3px rgba(0,0,0,0.2);background-color:transparent;border:none;position:relative;color:#fff;font-size:17px;text-shadow:0 -1px 0 rgba(0,0,0,0.2);background-image:-webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #18a7cb), color-stop(100%, #1ab7dd));background-image:-webkit-linear-gradient(bottom, #18a7cb 0%,#1ab7dd 100%);background-image:-moz-linear-gradient(bottom, #18a7cb 0%,#1ab7dd 100%);background-image:-o-linear-gradient(bottom, #18a7cb 0%,#1ab7dd 100%);background-image:linear-gradient(bottom, #18a7cb 0%,#1ab7dd 100%)}.custom-select:after{content:'▾';font-size:20px;color:#fff;position:absolute;display:inline-block;top:6px;right:11px}.custom-select select{background:transparent;border:none;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0;position:absolute;cursor:pointer;z-index:1;top:0;right:0;bottom:0;left:0}
+
+/* Grande */
+a { color: #313644; text-decoration: none; }
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+.main-content{
+    padding:10px;
+}
+
+/* nav button */
+.nav-button li {
+    list-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.nav-button a {
+    border-radius: 4px;
+    border: 2px solid #5B6173;
+    background-color: #313644;
+    padding:3px;
+    display: block;
+    color: #fff;
+}
+
+/* GitFox list */
+.gf-list {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1%;
+    width: 98%;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #5B6173; /* dark 313644 lighter 5B6173 */
+    text-align: left;
+}
+.gf-list > .gf-item{
+    list-style: none;
+    border-bottom: 1px solid #B8C1DC;
+}
+.gf-list > .gf-item:last-child{
+    border-bottom: 0;
+}
+.gf-list > .gf-item > a {
+    display: block;
+    outline:0 ;
+}
+.gf-list > .gf-item > a:hover {
+    background-color: #F8FAFE;
+}
+
+/* Repos-specific */
+.gf-list.repos {
+
+}
+
+.gf-list.repos > .gf-item strong {
+    display: inline-block;
+/*    width:33%;*/
+}
+.gf-list.repos > .gf-item span {
+/*    display: inline-block;
+    width:66%;
+*/    display: none;
+}
