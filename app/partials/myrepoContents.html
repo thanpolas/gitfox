@@ -1,9 +1,8 @@
+<a href="javascript:history.back()" class="out-nav"><i class="icon-reply"></i>Go Back</a>
 <div class="repo-file-content" ng-hide="folder">
   <header>
-    <h2>{{content.name}}</h2>
-    <span class="size-label">size:</span>
-    <span class="size-value">{{content.size}}</span>
-    <a href="{{content.html_url}}">View on Github</a>
+    <h2>{{content.name}} <span><small class="size-value">{{content.size}} bytes</small></span></h2>
+    <a href="{{content.html_url}}">View on Github <i class="icon-external-link"></i></a>
   </header>
   <code>
     <pre class="{{shClass}}">
@@ -16,7 +15,7 @@
   <li ng-hide="isRoot">
     <a href="javascript:history.back()">..</a>
   </li>
-  <li ng-repeat="content in contents" class="repo-item gf-item">
+  <li ng-repeat="content in contents | filter:query | orderBy:'+type'" class="repo-item gf-item">
     <a href="/#/myrepos/{{repo.name}}/{{content.name}}" class="repo-item">
        <strong><i class="icon-{{content.type}}-custom"></i></strong>
        <span>{{content.name}}</span>
