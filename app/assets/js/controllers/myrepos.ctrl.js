@@ -41,7 +41,10 @@ gitfox.ctrl = gitfox.ctrl || {};
       $scope.content = repoContents;
       $scope.shClass = gitfox.getSHext(repoContents.name);
       $scope.$on('$viewContentLoaded', function() {
-          SyntaxHighlighter.highlight();
+          // ugly, need to figure this out
+          setTimeout(function(){
+            SyntaxHighlighter.highlight();
+          }, 200);
       });
     } else {
       $scope.error = true;
